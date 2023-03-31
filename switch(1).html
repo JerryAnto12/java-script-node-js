@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+  </head>
+  <body align="center">
+    <h2>Apply switch case</h2>
+    <br />
+    <br />
+    <label>Enter your Number :</label>
+    <input type="number" placeholder="number" id="num" />
+    <br />
+    <br />
+    <button type="submit" onclick="fun()">submit</button>
+    <table>
+      <tr>
+        <td>Pos/Neg</td>
+        <td><input type="text" id="type1" readonly /></td>
+      </tr>
+      <tr>
+        <td>Odd/Even</td>
+        <td><input type="text" id="type2" readonly /></td>
+      </tr>
+    </table>
+
+    <script type="text/javascript">
+      var type1 = "";
+      var type2 = "";
+      function fun() {
+        var input = document.getElementById("num").value;
+        var letter = String.fromCharCode(input);
+        switch (input > 0 ? 1 : input < 0 ? 2 : 0) {
+          case 1:
+            type = "Positive Number";
+            break;
+          case 2:
+            type = "Negative Number";
+            break;
+          case 3:
+            type = "Its Zero or not a num";
+            break;
+        }
+
+        var type = (document.getElementById("type1").value = type);
+        console.log("Pos/Neg :", type);
+
+        switch (input % 2 == 0 ? 3 : input % 2 == 1 ? 4 : 5) {
+          case 3:
+            typeb = "Even Number";
+            break;
+          case 4:
+            typeb = "Odd Number";
+            break;
+          case 5:
+            typeb = "Its Zero or not a num";
+            break;
+        }
+
+        var typeb = (document.getElementById("type2").value = typeb);
+        console.log("Odd/Even :", typeb);
+      }
+    </script>
+  </body>
+</html>

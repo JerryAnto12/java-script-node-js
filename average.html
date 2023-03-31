@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding average</title>
+    <script>
+      var sum = 0;
+      var avg = 0;
+
+      function addsum() {
+        var sum = 0;
+        var n1 = parseInt(document.getElementById("num1").value);
+        var n2 = parseInt(document.getElementById("num2").value);
+        var n3 = parseInt(document.getElementById("num3").value);
+        var arr = [n1, n2, n3];
+
+        for (var z = 0; z < arr.length; z++) {
+          sum = sum + arr[z];
+        }
+        console.log("SUM:", sum);
+        avg = sum / 3;
+        console.log("Average:", avg);
+
+        return sum;
+      }
+      addsum([n1, n2, n3]);
+    </script>
+  </head>
+  <body>
+    <fieldset style="width: 60px">
+      <legend>Avg</legend>
+      Num 1 : <input type="text" id="num1" /> Num2:
+      <input type="text" id="num2" />
+      Num3: <input type="text" id="num3" />
+      <br />
+      <br />
+      <input type="button" value="Enter" onclick="addsum()" />
+    </fieldset>
+  </body>
+</html>

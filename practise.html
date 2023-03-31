@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark sheet</title>
+    <script>
+      function getreport() {
+        var grade = "";
+        var result = "";
+
+        var stuname = document.getElementById("stuname").value;
+        console.log("name:", stuname);
+
+        var stuclass = document.getElementById("stuclass").value;
+        console.log("class:", stuclass);
+
+        var tamil = document.getElementById("tamil").value;
+        console.log("tamil:", tamil);
+        var english = document.getElementById("english").value;
+        console.log("english:", english);
+
+        var total_m = english - -tamil;
+        console.log("total:", total_m);
+
+        var avg = total_m / 2;
+        console.log("average:", avg);
+
+        switch (
+          avg > 60 && avg <= 100
+            ? 1
+            : avg > 50 && avg <= 60
+            ? 2
+            : avg > 40 && avg <= 50
+            ? 3
+            : 0
+        ) {
+          case 1:
+            grade = "A";
+            result = "Pass";
+            break;
+
+          case 2:
+            grade = "B";
+            result = "Pass";
+            break;
+          case 3:
+            grade = "C";
+            result = "Pass";
+            break;
+
+          case 0:
+            grade = "R";
+            result = "OOMBA thaanda laaiku";
+            break;
+        }
+
+        document.getElementById("name").value =
+          document.getElementById("stuname").value;
+        var grade = (document.getElementById("grade").value = grade);
+        console.log("grade :", grade);
+        var result = (document.getElementById("result").value = result);
+        console.log("result :", result);
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset style="width: 60px">
+      <legend><p>detail solra punda</p></legend>
+      name : <input type="text" id="stuname" /> class :
+      <input type="text" id="stuclass" />
+      <table border="1">
+        <tr>
+          <td>Tamil</td>
+          <td><input type="text" id="tamil" /></td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td><input type="text" id="english" /></td>
+        </tr>
+        <tr></tr>
+      </table>
+
+      <br />
+      <br />
+      <input type="button" value="Enter" onclick="getreport()" />
+    </fieldset>
+
+    <fieldset style="width: 60px">
+      <legend>Report card</legend>
+      <table>
+        <tr>
+          <td>name</td>
+          <td><input type="text" id="name" readonly /></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td><input type="text" id="total" readonly /></td>
+        </tr>
+        <tr>
+          <td>Average</td>
+          <td><input type="text" id="average" readonly /></td>
+        </tr>
+        <tr>
+          <td>Grade</td>
+          <td><input type="text" id="grade" readonly /></td>
+        </tr>
+        <tr>
+          <td>Result</td>
+          <td><input type="text" id="result" readonly /></td>
+        </tr>
+      </table>
+    </fieldset>
+  </body>
+</html>

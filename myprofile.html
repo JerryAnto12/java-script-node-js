@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROFILE</title>
+    <script type="text/javascript">
+        function registration()
+     {
+ 
+         var name= document.getElementById("name").value;
+         console.log(name);
+         var gender= document.getElementById("gender").value;
+         console.log(gender);
+         var emailid= document.getElementById("emailid").value;
+         console.log(emailid);
+         var dob= document.getElementById("dob").value; 
+         console.log(dob);          
+         var fathername= document.getElementById("father").value;
+         console.log(fathername);
+         var address= document.getElementById("address").value;
+         console.log(address);
+         var mobileno= document.getElementById("mobileno").value;
+         console.log(mobileno);
+         var Xper= document.getElementById("X%").value;
+         console.log(Xper);
+         var XIIper= document.getElementById("XII%").value;
+         console.log(XIIper);
+         var ugper= document.getElementById("UG%").value;
+         console.log(ugper);
+
+
+     }
+   </script>
+   </head>
+ 
+     <body style="background-color:  #FF5733 ">
+     <div id="main">
+     <div class="h-tag">
+     <h2 align ='center'>My Profile</h2>
+     </div>
+     <div class="login">
+     <table cellspacing="2" align="center" cellpadding="8" border="0">
+     <tr>
+     <td align="right">Name:</td>
+     <td><input type="text" placeholder="Enter name" id="name" class="tb" /></td>
+     </tr>
+     <tr>
+     <td align="right">Gender :</td>
+     <td><input type="text" placeholder="Enter Gender" id="gender" class="tb" /></td>
+     </tr>565
+     <tr>
+     <td align="right">Email Id</td>
+     <td><input type="text" placeholder="Enter Email Id" id="emailid" class="tb" /></td>
+     </tr>
+     <tr>
+     <td align="right">Date of Birth :</td>
+     <td><input type="text" placeholder="dd-mm-yyyy" id="dob" class="tb" /></td>
+     </tr>
+     <tr>
+     <td align="right">Father's Name :</td>
+     <td><input type="text" placeholder="Enter Father's name" id="father" class="tb" /></td>
+     </tr>
+     <tr>
+     <td align="right">Address</td>
+     <td><input type="text" placeholder="Enter address" id="address" class="tb" /></td>
+     </tr>
+     <tr>
+       <td align="right">Mobile Number</td>
+       <td><input type="text" placeholder="Enter Mobile Number" id="mobileno" class="tb" /></td>
+       </tr>
+       <tr>
+           <td align="right">X Percentage</td>
+           <td><input type="text" placeholder="Enter X Percentage" id="X%" class="tb" /></td>
+           </tr>
+           <tr>
+            <td align="right">XII Percentage</td>
+            <td><input type="text" placeholder="Enter XII Percentage" id="XII%" class="tb" /></td>
+            </tr>
+            <tr>
+                <td align="right">Aggregate Percentage in UG</td>
+                <td><input type="text" placeholder="Enter UG Percentage" id="UG%" class="tb" /></td>
+                </tr>
+     <td></td>
+     <td>
+     <input type="submit" value="Submit" class="btn" onclick="registration()" /></td>
+     </tr>
+     </table>
+     </div>
+     </div>
+     </body>
+     </html>

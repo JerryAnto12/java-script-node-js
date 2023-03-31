@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function hello() {
+        var name = hello(prompt("enter your name"));
+
+        if (name != " ") {
+          console.log(name);
+        } else {
+          console.log("You didn't mention any name");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Greetings</h1>
+    <input type="button" value="click" onclick="hello()" />
+  </body>
+</html>
